@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../data/local/theme.dart';
 import '../../../newsletter/screens/categories_screen.dart';
 import '../providers/auth_provider.dart';
 
@@ -16,12 +19,16 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  final ThemeController themeController = Get.find();
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Sign Up')),
+      appBar: AppBar(title: const Text('Sign Up'), actions: [ElevatedButton(
+        onPressed: themeController.toggleTheme,
+        child: Text("Toggle Dark Mode"),
+      ),],),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -80,7 +87,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
                     }
                   },
-                  child: const Text('Sign Up'),
+                  child: const Text('Next'),
                 ),
               ),
             ],

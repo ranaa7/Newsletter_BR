@@ -1,4 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:label="newsletter_blueribbon_task"
         android:name="${applicationName}"
@@ -25,19 +29,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
-            <!-- Write This code -->
-            <intent-filter android:autoVerify="true">
+
+            <intent-filter android:autoVerify="true" tools:targetApi="m">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-
-                <!-- Include one or more domains that should be verified. -->
-                <data android:host="example.com" />
+                <data android:scheme="https"
+                    android:host="flutter-app-24779.firebaseapp.com"
+                    android:pathPrefix="/__/auth/action" />
             </intent-filter>
-            <!-- End -->
+
+
 
         </activity>
         <!-- Don't delete the meta-data below.

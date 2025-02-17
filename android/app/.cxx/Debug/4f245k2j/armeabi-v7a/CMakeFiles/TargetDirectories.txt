@@ -1,0 +1,2 @@
+E:/AndroidStudioProjects/newsletter_blueribbon_task/android/app/.cxx/Debug/4f245k2j/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/AndroidStudioProjects/newsletter_blueribbon_task/android/app/.cxx/Debug/4f245k2j/armeabi-v7a/CMakeFiles/rebuild_cache.dir
